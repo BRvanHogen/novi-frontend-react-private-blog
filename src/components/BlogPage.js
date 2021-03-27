@@ -1,8 +1,10 @@
 import React from 'react';
+import { useParams } from 'react-router-dom';
 
 function BlogPage() {
+    const { id } = useParams();
     return (
-        <h1>dit is de pagina van een blog</h1>
+        <h1>dit is de pagina van blog { id }</h1>
     );
 }
 

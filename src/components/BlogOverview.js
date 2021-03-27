@@ -3,11 +3,14 @@ import { Link } from 'react-router-dom';
 // import posts from './data/posts.json';
 
 
+
 function BlogOverview() {
+
+
     return (
         <>
         <h1>dit is de pagina met alle blogs</h1>
-        <p>ga<Link to="/:id"> hier </Link>naar de pagina van </p>
+        <p>ga<Link to="/:id"> hier </Link>naar de pagina van een blog </p>
         </>
     );
 }

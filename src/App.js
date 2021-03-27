@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import './App.css';
-import {Link, NavLink, Switch, Route} from 'react-router-dom';
+import { NavLink, Switch, Route } from 'react-router-dom';
 import posts from './data/posts.json';
 
 //import components
@@ -8,6 +8,7 @@ import HomePage from "./components/HomePage";
 import LoginPage from "./components/LoginPage";
 import BlogOverview from "./components/BlogOverview";
 import BlogPage from "./components/BlogPage";
+
 
 function App() {
     console.log(posts);
