@@ -1,28 +1,37 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 import './App.css';
-import { Switch, Route } from 'react-router-dom';
+import {Switch, Route} from 'react-router-dom';
+
+//import components
+import HomePage from "./components/HomePage";
+import LoginPage from "./components/LoginPage";
+import BlogOverview from "./components/BlogOverview";
+import BlogPage from "./components/BlogPage";
 
 function App() {
-  // We houden in de state bij of iemand is "ingelogd" (simpele versie)
-  const [isAuthenticated, toggleIsAuthenticated ] = useState(false);
+    // We houden in de state bij of iemand is "ingelogd" (simpele versie)
+    const [isAuthenticated, toggleIsAuthenticated] = useState(false);
 
-  return (
-      <Router>
-
-
-      </Router>
-  );
+    return (
+        <>
+            <Switch>
+                <Route exact path="/">
+                    <HomePage/>
+                </Route>
+                <Route path="/login">
+                    <LoginPage/>
+                </Route>
+                <Route path="/blogposts">
+                    <BlogOverview/>
+                </Route>
+                <Route path="/:id">
+                    <BlogPage/>
+                </Route>
+            </Switch>
+        </>
+    );
 }
 
 export default App;
 
-// [ ] Maak vier pagina componenten en zet er wat dummy content op. Geef alle "pagina's" weer in App.js
 
-// Home pagina (/)
-// Login pagina (/login)
-// Blog Overzicht pagina (/blogposts)
-// Blogpost pagina (/blog/:id)
-
-// [ ] Installeer react-router-dom en zet de basis routing op in de applicatie (gebruik de documentatie
-// of EdHub als geheugensteuntje). Zorg dat je alle pagina's kunt bezoeken. ' +
-// 'Je hoeft nog geen rekening te houden met toegankelijkheid.
